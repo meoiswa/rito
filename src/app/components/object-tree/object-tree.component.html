@@ -1,0 +1,8 @@
+<li *ngIf="object !== null">
+  {{ key }}: {{ value }}
+  <ul>
+    <li *ngFor="let item of (object | keyvalue)">
+      <app-object-tree [key]="item.key" [object]="item.value"></app-object-tree>
+    </li>
+  </ul>
+</li>
